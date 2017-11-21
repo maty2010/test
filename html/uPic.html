@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta name="wap-font-scale" content="no">
+    <meta name="applicable-device" content="mobile">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="initial-scale=0.5, maximum-scale=0.5, minimum-scale=0.5, user-scalable=no">
+    <script type="text/javascript">
+      (function(){
+      	var meta = document.createElement('meta')
+      	meta.setAttribute('name','viewport')
+      	var devicePixelRatio = window.devicePixelRatio
+      	var dpr = devicePixelRatio ? (1 / devicePixelRatio) : 1
+      	if(window.screen.availWidth == document.documentElement.offsetWidth){
+      		dpr = 1
+      		devicePixelRatio = 1
+      	}
+      	document.documentElement.setAttribute('data-dpr', devicePixelRatio || 1)
+      	if(window.navigator.userAgent.match(/android/i)){
+      		meta.setAttribute('content', 'width=device-width, initial-scale='+ dpr +', maximum-scale='+ dpr +', minimum-scale=' + dpr + ', user-scalable=no')
+      	}else{
+      		meta.setAttribute('content', 'initial-scale='+ dpr +', maximum-scale='+ dpr +', minimum-scale=' + dpr + ', user-scalable=no')
+      	}
+      	document.head.appendChild(meta)
+      })()
+    </script>
+    <script type="text/javascript">
+      var dpr = document.documentElement.getAttribute('data-dpr') || 1
+      var width = document.documentElement.offsetWidth
+      var fontSize = 100/750 * width;
+      document.querySelector('html').style.fontSize = (fontSize)+'px';
+      window.addEventListener('resize',function(){
+      	var width = document.querySelector('html').offsetWidth;
+      	var fontSize = 100/750 * width;
+      	document.querySelector('html').style.fontSize = (fontSize)+'px';
+      })
+    </script>
+    <link type="text/css" rel="stylesheet" href="../css/bigshot.min.css">
+  </head>
+  <body ontouchstart="">
+    <div class="up-pic">
+      <div class="yi-flexbox">
+        <div class="setbox J-hide">
+          <p class="secbtn J-secbtn">请点击选择感言</p>
+          <p class="color"><em class="c-1 J-c1"></em><em class="c-2 J-c2 hide"></em><em class="c-3 J-c3 hide"></em>换色</p>
+        </div>
+        <div class="flex1 infobg" id="contentId">
+          <div class="logos"><img src="../img/yc-logo2.png" alt="logo"><img src="../img/hb-logo2.png" alt="logo"><span class="bg"></span></div>
+          <div class="pic-bxo">
+            <div class="text-top">
+              <h4>晒照有惊喜</h4>
+              <p>分享您的代言照片至朋友圈并截图</p>
+              <p>发送至“易湃伙伴”公众号</p>
+              <p>我们将会挑选优质代言人与大咖一起为易车伙伴站台</p>
+              <p>成为易车伙伴APP开屏封面明星</p>
+              <p>更有精美礼物相送</p>
+              <p class="bule">详情咨询：易大湃yipaihuoban</p>
+            </div>
+            <div class="text-bot">
+              <p>ENERGIZE</p>
+              <p><em>ACHIEVEMENT</em></p>
+              <p><em>CONNECT</em></p>
+            </div>
+            <div class="clipArea" id="clipArea"></div>
+            <div class="view" id="view"></div>
+            <div class="btn-up J-btn-yz">
+              <input class="file" type="file" id="file">
+            </div>
+            <div class="iptbox user-name">
+              <input class="ipt" type="text" placeholder="输入姓名" required="required">
+            </div>
+            <div class="iptbox user-tit">
+              <input class="ipt" type="text" placeholder="经销商名(选填)">
+            </div>
+            <div class="iptbox user-txar">
+              <textarea class="txar" maxlength="20" placeholder="请输入代言感言不超过20字"></textarea>
+            </div>
+            <div class="qr-code"><img src="../img/ewm.png"></div>
+          </div>
+          <div class="cop J-hide">本活动最终解释权归易车所有</div>
+        </div>
+      </div>
+      <div class="clip-bot">
+        <p class="msg">【拖动或双指缩放图片至适合区域】</p>
+        <div class="btnbox clipBtn"><a class="btn-a" href="javascript:;" id="clipBtn">确 定</a></div>
+      </div>
+      <div class="btnbox J-hide"><a class="btn-a J-btns" href="javascript:;">生 成 海 报</a><a class="btn-a J-btnSave" href="javascript:;" id="btnId">生 成 海 报</a></div>
+      <div class="canvas2img" style="display:none;">
+        <div class="images" id="imagesId" style="display:none;"></div>
+        <div class="imgs" id="imgs"></div>
+        <p class="msg">长按图片可保存</p>
+        <div class="btnbox"><a class="btn-a" href="uPic.html">重 新 制 作</a></div>
+      </div>
+      <div class="layer-wrap">
+        <div class="laybox">
+          <h1 class="lay-tit"> <em class="cloes J-cloes"></em>代 言 感 言</h1>
+          <div class="lay-con">
+            <h2 class="h2-tit">请点击选择喜欢的文案</h2>
+            <ul class="list">
+              <li class="yi-flexbox center J-radio">
+                <div class="flex1">
+                  <p>每个不曾起舞的日子</p>
+                  <p>都是对生命的辜负</p>
+                  <p>人生路由自己决定</p>
+                  <p>绝不止于此</p>
+                </div><em class="r-icn"></em>
+              </li>
+              <li class="yi-flexbox center J-radio">
+                <div class="flex1">
+                  <p>人生路上</p>
+                  <p>有坦途也有逆境</p>
+                  <p>即使是踽踽独行</p>
+                  <p>也要勇敢而无畏</p>
+                </div><em class="r-icn"></em>
+              </li>
+              <li class="yi-flexbox center J-radio">
+                <div class="flex1">
+                  <p>对人生而言</p>
+                  <p>战斗比凯旋更过瘾</p>
+                  <p>成功不是不会失败</p>
+                  <p>而是失败后再出发</p>
+                </div><em class="r-icn"></em>
+              </li>
+              <li class="yi-flexbox center J-radio">
+                <div class="flex1">
+                  <p>有高低起伏的</p>
+                  <p>才是人生</p>
+                  <p>攀登过高峰</p>
+                  <p>才能看到别样的风景</p>
+                </div><em class="r-icn"></em>
+              </li>
+              <li class="yi-flexbox center J-radio">
+                <div class="flex1">
+                  <p>不怕现实冰冷</p>
+                  <p>就怕梦想不够滚烫</p>
+                  <p>不忘初心不负韶华</p>
+                  <p>永远满腔热血</p>
+                </div><em class="r-icn"></em>
+              </li>
+            </ul>
+          </div>
+          <div class="btnbox"><a class="btn-a J-cloes" href="javascript:;">就 要 这 句</a></div>
+        </div>
+      </div>
+    </div>
+    <script src="../js/common/common.min.js"></script>
+    <script src="../js/conf/uppic.min.js"></script>
+  </body>
+</html>
